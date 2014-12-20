@@ -19,8 +19,6 @@ namespace BDL
         {
             var customers = customerService.FindAll();
             var jobOffers = jobOffersService.FindAll();
-
-            MessageBox.Show(jobOffers.First().Description);
         }
     }
 }

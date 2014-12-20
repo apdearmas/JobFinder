@@ -1,5 +1,0 @@
-C:\dev\JobFinder\BusinessDomain\bin\Debug\BusinessDomain.dll
-C:\dev\JobFinder\BusinessDomain\bin\Debug\BusinessDomain.pdb
-C:\dev\JobFinder\BusinessDomain\obj\Debug\BusinessDomain.csprojResolveAssemblyReference.cache
-C:\dev\JobFinder\BusinessDomain\obj\Debug\BusinessDomain.dll
-C:\dev\JobFinder\BusinessDomain\obj\Debug\BusinessDomain.pdb
