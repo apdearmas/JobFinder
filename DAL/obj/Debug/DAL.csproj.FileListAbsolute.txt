@@ -1,0 +1,14 @@
+C:\dev\JobFinder\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\dev\JobFinder\DAL\bin\Debug\DAL.dll.config
+C:\dev\JobFinder\DAL\bin\Debug\DAL.dll
+C:\dev\JobFinder\DAL\bin\Debug\DAL.pdb
+C:\dev\JobFinder\DAL\bin\Debug\BusinessDomain.dll
+C:\dev\JobFinder\DAL\bin\Debug\EntityFramework.dll
+C:\dev\JobFinder\DAL\bin\Debug\BusinessDomain.pdb
+C:\dev\JobFinder\DAL\bin\Debug\EntityFramework.xml
+C:\dev\JobFinder\DAL\obj\Debug\DAL.dll
+C:\dev\JobFinder\DAL\obj\Debug\DAL.pdb
+C:\dev\JobFinder\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\dev\JobFinder\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\dev\JobFinder\DAL\obj\Debug\DAL.Migrations.InitialCreate.resources
+C:\dev\JobFinder\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
