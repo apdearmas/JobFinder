@@ -40,5 +40,10 @@ namespace BDLTest
             jobOffersServiceMock.Verify(m => m.FindAll(), Times.Once);
         }
 
+        [Fact]
+        public void test()
+        {
+        }
+
     }
 }
