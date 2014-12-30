@@ -34,7 +34,8 @@ namespace BDLTest
         [Fact]
         public void CustomerServiceFindAllIsCalled()
         {
-            customerServiceMock.Setup(m => m.FindAll()).Verifiable();
+            var customerList = new List<Customer>().AsQueryable();
+            customerServiceMock.Setup(m => m.FindAll()).Returns(customerList).Verifiable();
             sendJobOffersService.SendJobOffers();
             customerServiceMock.Verify(m => m.FindAll(), Times.Once);
         }
