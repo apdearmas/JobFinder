@@ -32,16 +32,6 @@ namespace JobFinder.Tests.Controllers
         }
 
         [Fact]
-        public void About()
-        {
-            var controller = new HomeController(sendJobOffesrServiceMock.Object);
-
-            var result = controller.About() as ViewResult;
-
-            Assert.IsNotNull(result);
-        }
-
-        [Fact]
         public void Contact()
         {
             var controller = new HomeController(sendJobOffesrServiceMock.Object);
