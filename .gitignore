@@ -51,7 +51,7 @@ build/
 Network Trash Folder
 Temporary Items
 .apdisk
-*.suo
+*.v12.suo
 *.mdf
 *.ldf
 <<<<<<< HEAD
