@@ -10,7 +10,7 @@ namespace DAL.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            ContextKey = "DAL.JobFinderContext";
+            //ContextKey = "DAL.JobFinderContext";
         }
 
         protected override void Seed(JobFinderContext context)
