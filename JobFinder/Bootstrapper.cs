@@ -34,6 +34,7 @@ namespace JobFinder
         container.RegisterType<IRepository<Customer>, Repository<Customer>>();
         container.RegisterType<IJobOffersService, JobOffersService>();
         container.RegisterType<IRepository<JobOffer>, Repository<JobOffer>>();
+        container.RegisterType<IEmailService, EmailService>();
     }
   }
 }
