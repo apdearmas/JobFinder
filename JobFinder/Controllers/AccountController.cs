@@ -16,7 +16,7 @@ namespace JobFinder.Controllers
     [InitializeSimpleMembership]
     public class AccountController : Controller
     {
-        //
+        // ggf
         // GET: /Account/Login
 
         [AllowAnonymous]

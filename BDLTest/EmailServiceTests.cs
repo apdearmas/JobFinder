@@ -1,11 +1,6 @@
 ﻿using BDL;
-using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
+using Moq;
 using Xunit;
 using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
@@ -13,46 +8,30 @@ namespace BDLTest
 {
     public class EmailServiceTests
     {
+        private Mock<ISmtpClientWrapper> smtpClientWrapperMock;
         private EmailService emailService;
 
         public EmailServiceTests()
         {
-            emailService = new EmailService();
+            smtpClientWrapperMock = new Mock<ISmtpClientWrapper>();
         }
+
         [Fact]       
         public void CreateEmailServiceObject()
-        {          
+        {
+            emailService = new EmailService(smtpClientWrapperMock.Object);
             Assert.IsNotNull(emailService);
         }
 
         [Fact]
-        public void CreateSmtpClientObject()
+        public void VerifySendIsCalled()
         {
-            Assert.IsNotNull(emailService.smtpClient);
-        }
- 
-        [Fact]
-        public void CreateMailObject()
-        {
-            Assert.IsNotNull(emailService.mail);
+            smtpClientWrapperMock.Setup(m => m.Send(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>())).Verifiable();
+            emailService = new EmailService(smtpClientWrapperMock.Object);
+            emailService.Send(string.Empty, string.Empty, string.Empty);
+            smtpClientWrapperMock.Verify(m => m.Send(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()), Times.Once());
         }
 
-        [Fact]
-        public void Verifying_Mail_Object_Is_Updated()
-        {
-            //arrange
-            var mail = new MailMessage("FROM@yahoo.com", "TO@yahoo.com", "subject", "body");
-            MailAddress mailAddress = new MailAddress("TO@yahoo.com");
-            EmailService sut_EmailService = new EmailService();
-            
-            //act
-            sut_EmailService.Send("TO@yahoo.com","subject", "body");
-
-            //assert
-            Assert.IsTrue(sut_EmailService.mail.To.Contains(mailAddress));
-            Assert.IsTrue(sut_EmailService.mail.Subject.Equals(mail.Subject));
-            Assert.IsTrue(sut_EmailService.mail.Body.Contains(mail.Body));
-        }
-
+        
     }
 }
