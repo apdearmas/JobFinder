@@ -23,6 +23,9 @@ build/
 *.msi
 *.msm
 *.msp
+*.v12.suo
+*.mdf
+*.ldf
 
 # Windows shortcuts
 *.lnk
@@ -51,12 +54,4 @@ build/
 Network Trash Folder
 Temporary Items
 .apdisk
-*.v12.suo
-*.mdf
-*.ldf
-<<<<<<< HEAD
 
-//frank_test
-=======
-.netrc
->>>>>>> 438e2ad5a136b62154f4c664a63abd596a5e43f8
