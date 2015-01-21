@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿namespace BDL
 {
     public class EmailService : IEmailService
@@ -9,6 +10,8 @@
     }
 }
 =======
+=======
+>>>>>>> master
 ﻿using BDL;
 using System;
 using System.Collections.Generic;
@@ -68,4 +71,7 @@ namespace BDL
         
     }
 }
+<<<<<<< HEAD
 >>>>>>> Added business logic to send email.
+=======
+>>>>>>> master
