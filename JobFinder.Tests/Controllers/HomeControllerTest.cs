@@ -28,7 +28,6 @@ namespace JobFinder.Tests.Controllers
             sendJobOffesrServiceMock.Verify(m => m.SendJobOffers(), Times.Once);
 
             Assert.IsNotNull(result);
-            Assert.AreEqual("Modify this template to jump-start your ASP.NET MVC application.", result.ViewBag.Message);
         }
 
         [Fact]
