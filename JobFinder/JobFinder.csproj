@@ -199,6 +199,7 @@
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobOffersController.cs" />
+    <Compile Include="Controllers\PostJobController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -329,6 +330,7 @@
     <Content Include="Views\JobOffers\Edit.cshtml" />
     <Content Include="Views\JobOffers\Delete.cshtml" />
     <Content Include="Views\Register\Register.cshtml" />
+    <Content Include="Views\PostJob\PostJob.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
