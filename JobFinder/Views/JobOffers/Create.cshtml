@@ -12,22 +12,9 @@
 
     <fieldset>
         <legend>JobOffer</legend>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.IssuedDate)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.IssuedDate)
-            @Html.ValidationMessageFor(model => model.IssuedDate)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.ExpirationDate)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.ExpirationDate)
-            @Html.ValidationMessageFor(model => model.ExpirationDate)
-        </div>
+        
+        @Html.Hidden("IssuedDate", DateTime.Now)
+        @Html.Hidden("ExpirationDate", DateTime.Now.AddDays(14))
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Description)
