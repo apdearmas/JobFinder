@@ -21,7 +21,7 @@ namespace JobFinder.Controllers
 
         public ActionResult Contact()
         {
-            sendJobOffersService.SendJobOffers();
+            //sendJobOffersService.SendJobOffers();
             return View();
         }
     }
