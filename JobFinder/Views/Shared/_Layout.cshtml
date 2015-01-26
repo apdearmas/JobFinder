@@ -22,9 +22,9 @@
                         <ul id="menu">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
                             <li>@Html.ActionLink("Register", "Register", "Register")</li>
-                            <li>@Html.ActionLink("PostJob", "PostJob", "PostJob")</li>
                             @if (User.IsInRole("Admin"))
                             {
+                                <li>@Html.ActionLink("PostJob", "PostJob", "PostJob")</li>
                                 <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
                                 <li>@Html.ActionLink("JobOffers", "Index", "JobOffers")</li>
                             }
