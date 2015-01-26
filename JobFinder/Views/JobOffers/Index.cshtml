@@ -32,7 +32,7 @@
             @Html.DisplayFor(modelItem => item.ExpirationDate)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Description)
+            @Html.TextAreaFor(modelItem => item.Description, new { @cols = "55", @rows = "10" })
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
