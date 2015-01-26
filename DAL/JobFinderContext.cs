@@ -10,6 +10,7 @@ namespace DAL
         {
         }
 
+        public DbSet<UserProfile> UserProfiles { get; set; }
         public DbSet<ContactPerson> ContactPersons { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<JobOffer> JobOffers { get; set; }

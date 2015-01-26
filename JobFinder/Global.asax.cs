@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using WebMatrix.WebData;
 
 namespace JobFinder
 {
@@ -13,6 +14,8 @@ namespace JobFinder
         protected void Application_Start()
         {
             Bootstrapper.Initialise();
+
+            WebSecurity.InitializeDatabaseConnection("JobFinderConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
 
             AreaRegistration.RegisterAllAreas();
 

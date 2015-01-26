@@ -1,5 +1,8 @@
 using System;
+using System.Linq;
+using System.Web.Security;
 using BusinessDomain;
+using WebMatrix.WebData;
 
 namespace DAL.Migrations
 {
@@ -10,7 +13,7 @@ namespace DAL.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            //ContextKey = "DAL.JobFinderContext";
+            ContextKey = "DAL.JobFinderContext";
         }
 
         protected override void Seed(JobFinderContext context)
@@ -28,6 +31,27 @@ namespace DAL.Migrations
             context.Customers.AddOrUpdate(tony);
             context.JobOffers.AddOrUpdate(jobOffer);
             context.SaveChanges();
+
+            SeedMembership();
+        }
+
+        private void SeedMembership()
+        {
+            WebSecurity.InitializeDatabaseConnection("JobFinderConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
+            var roles = (SimpleRoleProvider) Roles.Provider;
+            var membership = (SimpleMembershipProvider) Membership.Provider;
+            if (!roles.RoleExists("Admin"))
+            {
+                roles.CreateRole("Admin");
+            }
+            if (membership.GetUser("epereira", false) == null)
+            {
+                membership.CreateUserAndAccount("epereira", "epereira");
+            }
+            if (!roles.GetRolesForUser("epereira").Contains("Admin"))
+            {
+                roles.AddUsersToRoles(new [] {"epereira"}, new[] {"Admin"});
+            }
         }
     }
 }

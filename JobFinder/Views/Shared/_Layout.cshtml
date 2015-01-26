@@ -12,7 +12,7 @@
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("Job Finder", "Index", "Home")</p>
+                    <p class="site-title">@Html.ActionLink("Miami Jobs Finder", "Index", "Home")</p>
                 </div>
                 <div class="float-right">
                     <section id="login">
@@ -23,8 +23,11 @@
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
                             <li>@Html.ActionLink("Register", "Register", "Register")</li>
                             <li>@Html.ActionLink("PostJob", "PostJob", "PostJob")</li>
-                            <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
-                            <li>@Html.ActionLink("JobOffers", "Index", "JobOffers")</li>
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
+                                <li>@Html.ActionLink("JobOffers", "Index", "JobOffers")</li>
+                            }
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                         </ul>
                     </nav>

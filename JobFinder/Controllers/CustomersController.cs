@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 using BusinessDomain;
@@ -6,6 +7,7 @@ using DAL;
 
 namespace JobFinder.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class CustomersController : Controller
     {
         private JobFinderContext db = new JobFinderContext();

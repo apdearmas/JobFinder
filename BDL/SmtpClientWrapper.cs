@@ -10,8 +10,8 @@ namespace BDL
 
         const int SmtpPort = 587;
         const string Host = "plus.smtp.mail.yahoo.com";
-        const string MailFrom = "fgongora67@yahoo.com";
-        const string Password = "Gabriela01";
+        const string MailFrom = "elukse@yahoo.com";
+        const string Password = "TeamoJesus44";
 
         public SmtpClientWrapper()
         {
