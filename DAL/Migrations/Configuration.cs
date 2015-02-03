@@ -9,7 +9,7 @@ namespace DAL.Migrations
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(DAL.JobFinderContext context)
+        protected override void Seed(JobFinderContext context)
         {
         }
     }

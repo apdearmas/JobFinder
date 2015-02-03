@@ -10,40 +10,40 @@ namespace DAL.Migrations
     {
         public override void Up()
         {
-            CreateTable(
-                "dbo.ContactPersons",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
-                        EMail = c.String(),
-                        PhoneNumber = c.String(),
-                    })
-                .PrimaryKey(t => t.Id);
-            
-            CreateTable(
-                "dbo.Customers",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
-                        EMail = c.String(),
-                    })
-                .PrimaryKey(t => t.Id);
-            
-            CreateTable(
-                "dbo.JobOffers",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        IssuedDate = c.DateTime(nullable: false),
-                        ExpirationDate = c.DateTime(nullable: false),
-                        Description = c.String(),
-                        ContactPerson_Id = c.Int(),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.ContactPersons", t => t.ContactPerson_Id)
-                .Index(t => t.ContactPerson_Id);
+//            CreateTable(
+//                "dbo.ContactPersons",
+//                c => new
+//                    {
+//                        Id = c.Int(nullable: false, identity: true),
+//                        Name = c.String(),
+//                        EMail = c.String(),
+//                        PhoneNumber = c.String(),
+//                    })
+//                .PrimaryKey(t => t.Id);
+//            
+//            CreateTable(
+//                "dbo.Customers",
+//                c => new
+//                    {
+//                        Id = c.Int(nullable: false, identity: true),
+//                        Name = c.String(),
+//                        EMail = c.String(),
+//                    })
+//                .PrimaryKey(t => t.Id);
+//            
+//            CreateTable(
+//                "dbo.JobOffers",
+//                c => new
+//                    {
+//                        Id = c.Int(nullable: false, identity: true),
+//                        IssuedDate = c.DateTime(nullable: false),
+//                        ExpirationDate = c.DateTime(nullable: false),
+//                        Description = c.String(),
+//                        ContactPerson_Id = c.Int(),
+//                    })
+//                .PrimaryKey(t => t.Id)
+//                .ForeignKey("dbo.ContactPersons", t => t.ContactPerson_Id)
+//                .Index(t => t.ContactPerson_Id);
 
             AddPredefinedCustomers();
             AddPredefinedJobOffers();

@@ -61,6 +61,7 @@
     <Compile Include="AuthConfig.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="JobFinderContext.cs" />
+    <Compile Include="MigrationExecution.cs" />
     <Compile Include="Migrations\201502031240334_InitialCreate.cs" />
     <Compile Include="Migrations\201502031240334_InitialCreate.Designer.cs">
       <DependentUpon>201502031240334_InitialCreate.cs</DependentUpon>

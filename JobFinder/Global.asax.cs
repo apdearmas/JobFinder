@@ -23,6 +23,8 @@ namespace JobFinder
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             
             AuthConfig.RegisterAuth();
+
+            MigrationExecution.MigrateDatabaseToLatest();
         }
     }
 }
