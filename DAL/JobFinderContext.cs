@@ -6,7 +6,7 @@ namespace DAL
     public class JobFinderContext : DbContext
     {
         public JobFinderContext()
-            : base("name = JobFinderConnection")
+            : base("name = JobFinderContext")
         {
         }
 
