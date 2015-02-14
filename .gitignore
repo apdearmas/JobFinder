@@ -28,6 +28,9 @@ build/
 *.ldf
 *.DotSettings.user
 
+*.gitattributes
+*.gitignore
+
 # Windows shortcuts
 *.lnk
 

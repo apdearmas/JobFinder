@@ -43,6 +43,7 @@
     <Compile Include="ContactPerson.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="JobOffer.cs" />
+    <Compile Include="Location.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserProfile.cs" />
   </ItemGroup>

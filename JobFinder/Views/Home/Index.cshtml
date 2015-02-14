@@ -1,7 +1,31 @@
-﻿@{
+﻿@model IEnumerable<BusinessDomain.JobOffer>
+
+
+@{
     ViewBag.Title = "Home";
 }
 
 <hgroup class="title">
     <h1>@ViewBag.Title</h1>
 </hgroup>
+
+<form method="get">
+    <input type="search" name="searchTerm" />
+    <input type="search" name="searchTerm_City" />
+    <input type="submit" value="Find Jobs" />
+</form>
+
+
+@foreach (var item in Model)
+{
+    <div>
+        <h4>@item.Title</h4>
+        @*<div>Issue: @item.IssuedDate, Expiration: @item.ExpirationDate</div>
+        <div>City: @item.LocationId.City</div>
+        <div>
+            @item.Description
+           
+        </div>*@
+        <hr />
+    </div>
+}

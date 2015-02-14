@@ -20,7 +20,7 @@ namespace DAL.Migrations
                         PhoneNumber = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
-            
+
             CreateTable(
                 "dbo.Customers",
                 c => new
@@ -30,7 +30,7 @@ namespace DAL.Migrations
                         EMail = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
-            
+
             CreateTable(
                 "dbo.JobOffers",
                 c => new
