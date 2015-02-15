@@ -73,7 +73,10 @@ namespace DAL.Migrations
         private void AddPredefinedJobOffers()
         {
             Sql("INSERT INTO ContactPersons Values ('Empleador', 'xxx@yahoo.com', '00000000000')");
-            Sql("INSERT INTO JobOffers Values ('01/01/2015', '01/07/2015', 'Job Offer', 1)");
+            for (int i = 0; i < 1000; i++)
+            {
+                Sql(string.Format("INSERT INTO JobOffers Values ('01/01/2015', '01/07/2015', 'Job Offer {0}', 1)", i ));
+            }
         }
         private void SeedMembership()
         {

@@ -29,7 +29,9 @@ namespace DAL.Migrations
         private void UpdateJobOffers()
         {
            Sql("INSERT INTO Locations Values ( 'Miami', 'Fl',33018)");
-           Sql("UPDATE JobOffers SET [Title] = 'Mechanic' ,[Location_Id] = 1");
+           Sql(string.Format("UPDATE JobOffers SET [Title] = 'Mecanico' , [Location_Id] = 1 WHERE Id BETWEEN {0} AND {1}", 1, 299));
+           Sql(string.Format("UPDATE JobOffers SET [Title] = 'Doctor'   , [Location_Id] = 1 WHERE Id BETWEEN {0} AND {1}", 300, 699));
+           Sql(string.Format("UPDATE JobOffers SET [Title] = 'Maestro'  , [Location_Id] = 1 WHERE Id BETWEEN {0} AND {1}", 700, 1000));
         }
         
         public override void Down()
