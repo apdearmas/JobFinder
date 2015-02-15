@@ -24,6 +24,7 @@ namespace JobFinder
             
             AuthConfig.RegisterAuth();
 
+
             MigrationExecution.MigrateDatabaseToLatest();
         }
     }

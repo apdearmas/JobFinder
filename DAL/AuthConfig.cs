@@ -1,4 +1,6 @@
-﻿namespace DAL
+﻿using WebMatrix.WebData;
+
+namespace DAL
 {
     public static class AuthConfig
     {

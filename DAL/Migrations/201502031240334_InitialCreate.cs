@@ -46,7 +46,8 @@ namespace DAL.Migrations
                 .ForeignKey("dbo.ContactPersons", t => t.ContactPerson_Id)
                 .Index(t => t.ContactPerson_Id);
 
-            WebSecurity.InitializeDatabaseConnection("JobFinderContext", "UserProfile", "UserId", "UserName", autoCreateTables: true);
+            if (!WebSecurity.Initialized)
+                WebSecurity.InitializeDatabaseConnection("JobFinderContext", "UserProfile", "UserId", "UserName", autoCreateTables: true);
 
             AddPredefinedCustomers();
             AddPredefinedJobOffers();
