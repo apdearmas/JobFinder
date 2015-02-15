@@ -3,6 +3,7 @@ using System.Linq;
 using System.Web.Mvc;
 using BusinessDomain;
 using DAL;
+using System.Data;
 
 namespace JobFinder.Controllers
 {

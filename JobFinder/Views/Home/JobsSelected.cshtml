@@ -1,0 +1,23 @@
+﻿@*@model BusinessDomain.JobOfferListViewModel*@
+
+@model IEnumerable<BusinessDomain.JobOfferListViewModel>
+
+@{
+    ViewBag.Title = "JobsSelected";
+}
+
+<h2>JobsSelected</h2>
+
+@foreach (var item in Model)
+{
+    <div>
+        <h4>@item.Title</h4>
+        <div>Issue: @item.IssuedDate, Expiration: @item.ExpirationDate</div>
+        <div>City: @item.City, State: @item.State, ContactPerson: @item.ContactPerson</div>
+        <div>
+            @item.Description
+        </div>
+
+        <hr />
+    </div>
+}
