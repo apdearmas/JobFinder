@@ -8,6 +8,7 @@ namespace DAL
         public JobFinderContext()
             : base("name = JobFinderContext")
         {
+            Database.SetInitializer<JobFinderContext>(null);
         }
 
         public DbSet<UserProfile> UserProfiles { get; set; }
