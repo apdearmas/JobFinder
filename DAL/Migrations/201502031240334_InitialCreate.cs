@@ -10,6 +10,7 @@ namespace DAL.Migrations
     {
         public override void Up()
         {
+
             CreateTable(
                 "dbo.ContactPersons",
                 c => new
